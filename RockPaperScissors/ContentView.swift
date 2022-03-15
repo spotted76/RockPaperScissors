@@ -45,8 +45,6 @@ class GameStatistics : ObservableObject {
         }
         
         numGamesPlayed += 1
-        
-        print("Answered \(correctAnswers) : \(numGamesPlayed)")
     }
     
     func resetStats() {
@@ -91,7 +89,6 @@ struct ContentView: View {
                     HStack(spacing: 25) {
                         ForEach(choices.indices) { choice in
                             Button(choices[choice]) {
-                                print("Clicked \(choice)")
                                 checkAnswer(choice)
                             }
                             .font(.system(size: 75))
